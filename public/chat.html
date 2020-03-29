@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div id="frame">
+        <div id="sidepanel">
+            <div id="contacts">
+                <h4 style="margin-top: 20px; margin-left: 20px;"><i class="far fa-comment"></i> Room Name</h4>
+                <ul id="rooms"></ul>
+            </div>
+            <div id="contacts">
+                <h4 style="margin-top: 20px; margin-left: 20px;"><i class="fas fa-users"></i> Users</h4>
+                <ul id="users"></ul>
+            </div>
+            <div id="bottom-bar">
+                <a href="index.html"><button id="settings"><i class="fas fa-sign-out-alt"></i> <span>Leave Room</span></button></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="contact-profile">
+                <p style="margin-left:20px;" id="current-user"></p>
+            </div>
+            <div class="messages">
+                <ul class="chat-messages">
+                </ul>
+            </div>
+            <div class="message-input">
+                <form id="chat-form">
+                    <div class="wrap">
+                        <input type="text" id="msg" placeholder="Write your message..." />
+                        <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+                        <button type="submit" class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.3/qs.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/common.js"></script>
+
+</html>
