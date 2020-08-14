@@ -6,7 +6,7 @@
     "scripts": {
         "start": "node server.js",
         "dev": "nodemon server.js",
-        "heroku-postbuild": "ng build --prod"
+        "heroku-postbuild": "node server.js"
     },
     "author": "Naman Gupta",
     "license": "MIT",
